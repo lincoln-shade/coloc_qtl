@@ -82,5 +82,5 @@ bigBedToBed dbSNP153Common.bb dbSNPCommon.bed
     --betasd_col [beta SE column in --gwas_sumstats file] \
     --N [GWAS sample size] \
     --phenotype_type 'quant' \
-    --phenotype_sd [SD of the GWAS outcome] \
+    --phenotype_sd [SD of the GWAS outcome] 
 ```
