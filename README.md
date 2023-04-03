@@ -71,6 +71,7 @@ bigBedToBed dbSNP153Common.bb dbSNPCommon.bed
 ./coloc_qtl.py \
     --ref_file snp_list.txt \
     --gwas_sumstats [your GWAS Summary statistics file] \
+    --max_pval [highest GWAS pval for a variant to be checked for QTL activity. Recommended 1e-5 or lower] \ 
     --topmed \
     --eqtl_dir_topmed [directory with significant TOPMed eQTLs] \
     --eqtl_all_dir_topmed [directory with all TOPMed eQTL sumstats] \
