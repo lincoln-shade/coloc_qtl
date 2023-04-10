@@ -41,16 +41,6 @@ ROSMAP QTL summary statistics can be downloaded from https://mostafavilab.stat.u
 
 TOPMed QTL results do not come with significant QTLs. You will need to subset the nominal summary statistics to create a subset of significant QTLs in a separate directory with the same file names. I used a p-value threshold of 1e-5. Additionally, using the whole blood MAF $\ge 0.001$ is not recommended because coloc_qtl currently only works with common (MAF $\ge 0.01$) SNPs. 
 
-```
-./src/common/extract_variant_ids.R
-
-./src/common/subset_snp_list.R
-
-# depending on which data sets you want to use
-./src/find_qtls_gtex.py
-./src
-```
-
 # Setup and running
 
 1. Format SNP reference file
