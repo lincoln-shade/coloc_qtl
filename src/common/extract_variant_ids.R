@@ -14,29 +14,10 @@ library(argparse)
 parser <- ArgumentParser()
 parser$add_argument("-f", "--file", help = "text file w SNP and chrom cols")
 parser$add_argument("--snp_col", default = "SNPID", help = "SNP column name")
-parser$add_argument(
-    "--snp_format", 
-    default = "rsID", 
-    help = paste(
-        "format that the SNP IDs are in.",
-        "Default is rsID.",
-        "Options are rsID, chr_bp_ref_alt, or chr_bp_ref_alt_b38."
-    )
-)
-parser$add_argument("-o", "--out", default = "./snp_list.csv",
-                    help = "output filename")
-parser$add_argument(
-    "--chrom_col", 
-    default = "chr", 
-    help = paste(
-        "chromosome column.",
-        "Values should be formatted as \"[chr]\" or \"chr[chr]\""
-    )
-)
-parser$add_argument(
-    "--pval_col", 
-    help = "p-value column for use with --max_pval"
-)
+parser$add_argument("--snp_format", default = "rsID", help = "format that the SNP IDs are in. Default is rsID. Options are rsID, chr_bp_ref_alt, or chr_bp_ref_alt_b38.")
+parser$add_argument("-o", "--out", default = "./snp_list.csv", help = "output filename")
+parser$add_argument("--chrom_col", default = "chr", help = "chromosome column. Values should be formatted as [chr] or chr[chr]")
+parser$add_argument("--pval_col", help = "p-value column for use with --max_pval")
 parser$add_argument("--max_pval", help = "optional pval threshold for SNPs")
 args <- parser$parse_args()
 
