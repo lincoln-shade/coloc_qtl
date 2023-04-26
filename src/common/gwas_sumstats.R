@@ -94,14 +94,15 @@ if (args$phenotype_type == "cc") {
         sdY <- sd(pheno)
     } else {
         N <- as.integer(args$N)
-        if (!is.null(args$sdy)) {
-            sdY <- as.numeric(args$sdy)
+        if (!is.null(args$phenotype_sd)) {
+            sdY <- as.numeric(args$phenotype_sd)
         } else {
             print("sdY will be estimated from beta, varbeta, MAF, and N")
             if (
                 is.null(N) | is.null(args$beta_col) | 
                 (is.null(args$betavar_col) & is.null(args$betasd_col)) | 
-                is.null(args$maf_col)) {
+                is.null(args$maf_col)
+            ) {
                 stop("Cannot estimate sdY. beta, varbeta, MAF, or N missing")
             }
         }
